@@ -1,4 +1,4 @@
-package com.company.rest_security.service;
+package com.company.rest_security.service.impl;
 
 import com.company.rest_security.dao.RoleDao;
 import com.company.rest_security.dao.UserDao;
@@ -6,6 +6,7 @@ import com.company.rest_security.entity.Role;
 import com.company.rest_security.entity.User;
 import com.company.rest_security.exception.DuplicateEntityException;
 import com.company.rest_security.exception.NoSuchEntityException;
+import com.company.rest_security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

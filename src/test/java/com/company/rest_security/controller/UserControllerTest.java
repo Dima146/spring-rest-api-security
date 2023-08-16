@@ -3,7 +3,7 @@ package com.company.rest_security.controller;
 import com.company.rest_security.Application;
 import com.company.rest_security.dto.UserDto;
 import com.company.rest_security.entity.User;
-import com.company.rest_security.service.UserServiceImpl;
+import com.company.rest_security.service.impl.UserServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

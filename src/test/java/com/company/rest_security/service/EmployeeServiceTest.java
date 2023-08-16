@@ -2,6 +2,7 @@ package com.company.rest_security.service;
 
 import com.company.rest_security.dao.EmployeeDao;
 import com.company.rest_security.entity.Employee;
+import com.company.rest_security.service.impl.EmployeeServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

@@ -1,6 +1,7 @@
 package com.company.rest_security.dao;
 
 import com.company.rest_security.Application;
+import com.company.rest_security.dao.impl.UserDaoImpl;
 import com.company.rest_security.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,5 +1,6 @@
-package com.company.rest_security.dao;
+package com.company.rest_security.dao.impl;
 
+import com.company.rest_security.dao.UserDao;
 import com.company.rest_security.entity.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;

@@ -1,9 +1,10 @@
-package com.company.rest_security.service;
+package com.company.rest_security.service.impl;
 
 import com.company.rest_security.dao.EmployeeDao;
 import com.company.rest_security.entity.Employee;
 import com.company.rest_security.exception.DuplicateEntityException;
 import com.company.rest_security.exception.NoSuchEntityException;
+import com.company.rest_security.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

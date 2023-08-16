@@ -64,6 +64,11 @@ The *administrator* has access to adding new employees to the database, changing
 <img height="100" src="screenshots\registration.png" title="registration" width="150"/>
 
 
+![already-exists](/screenshots/already-exists.png) 
+
+
+
+
 
 
 

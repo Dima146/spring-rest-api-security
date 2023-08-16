@@ -1,4 +1,4 @@
-package com.company.rest_security.service;
+package com.company.rest_security.service.impl;
 
 import com.company.rest_security.dao.UserDao;
 import com.company.rest_security.entity.Role;

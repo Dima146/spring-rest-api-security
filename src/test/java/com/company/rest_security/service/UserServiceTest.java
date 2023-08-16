@@ -4,6 +4,7 @@ import com.company.rest_security.dao.RoleDao;
 import com.company.rest_security.dao.UserDao;
 import com.company.rest_security.entity.Role;
 import com.company.rest_security.entity.User;
+import com.company.rest_security.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
