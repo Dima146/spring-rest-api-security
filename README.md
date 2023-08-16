@@ -55,10 +55,10 @@ The *administrator* has access to adding new employees to the database, changing
 
 ### Extra
 <p float="left">
-<img height="100" src="screenshots\already-exists.png" title="already-exists" width="150"/>
-<img height="100" src="screenshots\authentication.png" title="authentication" width="150"/>
-<img height="100" src="screenshots\by-id.png" title="by-id" width="150"/>
-<img height="100" src="screenshots\does-not-exist.png" title="does not exist" width="150"/>
+<img height="150" src="screenshots\already-exists.png" title="already-exists" width="200"/>
+<img height="150" src="screenshots\authentication.png" title="authentication" width="200"/>
+<img height="150" src="screenshots\by-id.png" title="by-id" width="200"/>
+<img height="150" src="screenshots\does-not-exist.png" title="does not exist" width="200"/>
 </p>
 
 <p>
