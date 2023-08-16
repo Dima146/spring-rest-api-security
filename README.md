@@ -54,14 +54,14 @@ The *administrator* has access to adding new employees to the database, changing
       Delete - DELETE http://localhost:8080/api/employees/{id}
 
 ### Extra
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\already-exists.png" title="already-exists" width="150"/>
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\authentication.png" title="authentication" width="150"/>
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\by-id.png" title="by-id" width="150"/>
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\does-not-exist.png" title="does not exist" width="150"/>
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\not-authenticated.png" title="not-authenticated" width="150"/>
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\not-authorized.png" title="not-authorized" width="150"/>
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\registration-errors.png" title="registration-errors" width="150"/>
-<img height="100" src="D:\IntellijProjects\[NEW] - Spring Boot 3, Spring 6 &amp; Hibernate for Beginners\bonus\REST API Security - Custom Tables with JPAHibernate\spring-rest-api-security\screenshots\registration.png" title="registration" width="150"/>
+<img height="100" src="screenshots\already-exists.png" title="already-exists" width="150"/>
+<img height="100" src="screenshots\authentication.png" title="authentication" width="150"/>
+<img height="100" src="screenshots\by-id.png" title="by-id" width="150"/>
+<img height="100" src="screenshots\does-not-exist.png" title="does not exist" width="150"/>
+<img height="100" src="screenshots\not-authenticated.png" title="not-authenticated" width="150"/>
+<img height="100" src="screenshots\not-authorized.png" title="not-authorized" width="150"/>
+<img height="100" src="screenshots\registration-errors.png" title="registration-errors" width="150"/>
+<img height="100" src="screenshots\registration.png" title="registration" width="150"/>
 
 
 
