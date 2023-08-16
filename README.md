@@ -62,10 +62,10 @@ The *administrator* has access to adding new employees to the database, changing
 </p>
 
 <p>
-<img height="100" src="screenshots\not-authenticated.png" title="not-authenticated" width="150"/>
-<img height="100" src="screenshots\not-authorized.png" title="not-authorized" width="150"/>
-<img height="100" src="screenshots\registration-errors.png" title="registration-errors" width="150"/>
-<img height="100" src="screenshots\registration.png" title="registration" width="150"/>
+<img height="150" src="screenshots\not-authenticated.png" title="not-authenticated" width="200"/>
+<img height="150" src="screenshots\not-authorized.png" title="not-authorized" width="200"/>
+<img height="150" src="screenshots\registration-errors.png" title="registration-errors" width="200"/>
+<img height="150" src="screenshots\registration.png" title="registration" width="200"/>
 </p>
 
 
