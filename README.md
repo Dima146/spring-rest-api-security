@@ -54,17 +54,20 @@ The *administrator* has access to adding new employees to the database, changing
       Delete - DELETE http://localhost:8080/api/employees/{id}
 
 ### Extra
+<p float="left">
 <img height="100" src="screenshots\already-exists.png" title="already-exists" width="150"/>
 <img height="100" src="screenshots\authentication.png" title="authentication" width="150"/>
 <img height="100" src="screenshots\by-id.png" title="by-id" width="150"/>
 <img height="100" src="screenshots\does-not-exist.png" title="does not exist" width="150"/>
+</p>
+
+<p>
 <img height="100" src="screenshots\not-authenticated.png" title="not-authenticated" width="150"/>
 <img height="100" src="screenshots\not-authorized.png" title="not-authorized" width="150"/>
 <img height="100" src="screenshots\registration-errors.png" title="registration-errors" width="150"/>
 <img height="100" src="screenshots\registration.png" title="registration" width="150"/>
+</p>
 
-
-![already-exists](/screenshots/already-exists.png) 
 
 
 
