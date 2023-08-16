@@ -87,4 +87,18 @@ public class EmployeeDaoTest {
         assertThat(result.get().getFirstName()).isEqualTo("John");
 
     }
+
+    @Test
+    public void EmployeeDao_FindByFirstOrLastName_ReturnEmployees() {
+
+        Employee employee = new Employee("John", "Doe", "john@mail.com");
+        Employee employee1 = new Employee("Johnny", "Doe", "johnny@mail.com");
+        employeeDao.saveEmployee(employee);
+        employeeDao.saveEmployee(employee1);
+
+        List<Employee> result = employeeDao.findByFirstOrLastName("John");
+        assertThat(result).isNotEmpty();
+        assertThat(result.size()).isEqualTo(2);
+
+    }
 }

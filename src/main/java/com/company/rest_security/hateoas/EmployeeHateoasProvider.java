@@ -30,7 +30,10 @@ public class EmployeeHateoasProvider extends RepresentationModel<EmployeeDto> {
                 .findAll()).withRel("all employees"));
 
         employeeDto.add(linkTo(methodOn(CONTROLLER)
-                .addEmployee(employeeDto)).withRel("add new"));
+                .findByFirstOrLastName(employeeDto.getFirstName())).withRel("by first/last name"));
+
+        employeeDto.add(linkTo(methodOn(CONTROLLER)
+                .addEmployee(employeeDto)).withRel("create"));
 
     }
 }

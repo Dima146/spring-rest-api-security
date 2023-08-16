@@ -83,4 +83,17 @@ public class EmployeeServiceTest {
 
     }
 
+    @Test
+    public void EmployeeService_FindByFirstOrLastName_ReturnEmployees() {
+
+        Employee employee1 = new Employee("John", "Doe", "john@mail.com");
+        Employee employee2 = new Employee("Johnny", "Doe", "johnny@mail.com");
+        when(employeeDao.findByFirstOrLastName(Mockito.any(String.class))).thenReturn(List.of(employee1, employee2));
+
+        List<Employee> result = employeeService.findByFirstOrLastName("John");
+        assertThat(result).isNotNull();
+        assertThat(result.size()).isEqualTo(2);
+
+    }
+
 }

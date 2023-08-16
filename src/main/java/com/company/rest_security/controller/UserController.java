@@ -19,7 +19,6 @@ public class UserController {
 
     private final UserService userService;
     private final DtoConverter<User, UserDto> userDtoConverter;
-
     private final JWTAuthProvider jwtAuthProvider;
     private final AuthenticationManager authenticationManager;
 
@@ -33,7 +32,7 @@ public class UserController {
         this.authenticationManager = authenticationManager;
     }
 
-    @PostMapping("/register")
+    @PostMapping("/registration")
     @ResponseStatus(HttpStatus.CREATED)
     public UserDto registerUser(@RequestBody @Valid UserDto userDto) {
         User savedUser = userService.saveUser(userDtoConverter.convertToEntity(userDto));
@@ -41,7 +40,7 @@ public class UserController {
         return userDtoConverter.convertToDto(savedUser);
     }
 
-    @PostMapping("/authenticate")
+    @PostMapping("/authentication")
     @ResponseStatus(HttpStatus.OK)
     public UserCredentialDto authenticateUser(@RequestBody UserCredentialDto userCredentialDto) {
 

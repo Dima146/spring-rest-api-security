@@ -12,6 +12,8 @@ public class UserDaoImpl implements UserDao {
 
     private final EntityManager entityManager;
 
+    private static final String FIND_BY_USERNAME = "from User where username = :username";
+
     @Autowired
     public UserDaoImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -20,7 +22,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public Optional<User> findUserByUsername(String username) {
 
-        TypedQuery<User> query = entityManager.createQuery("from User where username = :username", User.class);
+        TypedQuery<User> query = entityManager.createQuery(FIND_BY_USERNAME, User.class);
         query.setParameter("username", username);
 
         return query.getResultList().stream().findFirst();

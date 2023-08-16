@@ -14,6 +14,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     private final EntityManager entityManager;
 
+    private static final String FIND_ALL = "SELECT e from Employee e";
+    private static final String FIND_BY_ALL_DATA = "from Employee where lower(firstName) like :firstName " +
+            "and lower(lastName) like :lastName and lower(email) like :email";
+
+    private static final String FIND_BY_FIRST_OR_LAST_NAME = "from Employee where lower(firstName) " +
+            "like :name or lower(lastName) like :name";
+
     @Autowired
     public EmployeeDaoImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -26,7 +33,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public List<Employee> findAllEmployees() {
-        return entityManager.createQuery("SELECT e from Employee e", Employee.class)
+        return entityManager.createQuery(FIND_ALL, Employee.class)
                 .getResultList();
     }
 
@@ -51,13 +58,22 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public Optional<Employee> findEmployeeByAllData(Employee employee) {
 
-        TypedQuery<Employee> query = entityManager.createQuery("from Employee where lower(firstName) like :firstName " +
-                "and lower(lastName) like :lastName and lower(email) like :email", Employee.class)
+        TypedQuery<Employee> query = entityManager.createQuery(FIND_BY_ALL_DATA, Employee.class)
 
                         .setParameter("firstName", employee.getFirstName().toLowerCase() + "%")
                         .setParameter("lastName", employee.getLastName().toLowerCase() + "%")
                         .setParameter("email", employee.getEmail().toLowerCase() + "%");
 
         return query.getResultList().stream().findFirst();
+    }
+
+    @Override
+    public List<Employee> findByFirstOrLastName(String name) {
+
+        TypedQuery<Employee> query = entityManager.createQuery(FIND_BY_FIRST_OR_LAST_NAME, Employee.class)
+                .setParameter("name", name.toLowerCase() + "%");
+
+        return query.getResultList();
+
     }
 }

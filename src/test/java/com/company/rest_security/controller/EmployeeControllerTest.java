@@ -47,7 +47,7 @@ public class EmployeeControllerTest {
 
         when(employeeService.findAll()).thenReturn(List.of(employee1, employee2));
 
-        mockMvc.perform(get("/api/employees"))
+        mockMvc.perform(get("/employees"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(2)));
@@ -64,7 +64,7 @@ public class EmployeeControllerTest {
 
         when(employeeService.addEmployee(Mockito.any(Employee.class))).thenReturn(employee);
 
-        mockMvc.perform(post("/api/employees")
+        mockMvc.perform(post("/employees")
                         .content(objectMapper.writeValueAsString(employee))
                         .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON))
 
@@ -85,7 +85,7 @@ public class EmployeeControllerTest {
         employee.setId(1L);
         when(employeeService.findById(1L)).thenReturn(employee);
 
-        mockMvc.perform(get("/api/employees/{id}", 1)
+        mockMvc.perform(get("/employees/{id}", 1)
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON))
 
                 .andExpect(status().isOk())
@@ -109,7 +109,7 @@ public class EmployeeControllerTest {
 
         employee.setFirstName("James");
 
-        mockMvc.perform(put("/api/employees/{id}", 1)
+        mockMvc.perform(put("/employees/{id}", 1)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(employee)))
 
@@ -126,11 +126,31 @@ public class EmployeeControllerTest {
     @Test
     public void EmployeeController_DeleteEmployee_SuccessfullyDeleted() throws Exception {
 
-        mockMvc.perform(delete("/api/employees/{id}", 1)
+        mockMvc.perform(delete("/employees/{id}", 1)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
         verify(employeeService, times(1)).deleteById(1L);
+
+    }
+
+    @Test
+    public void EmployeeController_FindByFirstOrLastName_ReturnEmployees() throws Exception {
+
+        Employee employee1 = new Employee("John", "Doe", "john@mail.com");
+        Employee employee2 = new Employee("Johnny", "Doe", "johnny@mail.com");
+        String name = "John";
+
+        when(employeeService.findByFirstOrLastName(Mockito.any(String.class))).thenReturn(List.of(employee1, employee2));
+
+        mockMvc.perform(get("/employees/{name}/", name))
+//                        .param("name", name))
+
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", hasSize(2)));
+
+        verify(employeeService, times(1)).findByFirstOrLastName(name);
 
     }
 }

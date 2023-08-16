@@ -17,4 +17,6 @@ public interface EmployeeDao {
     void deleteEmployeeById(Long id);
 
     Optional<Employee> findEmployeeByAllData(Employee employee);
+
+    List<Employee> findByFirstOrLastName(String name);
 }

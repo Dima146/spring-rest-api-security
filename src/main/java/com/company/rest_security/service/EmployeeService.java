@@ -15,4 +15,6 @@ public interface EmployeeService {
 
     void deleteById(long id);
 
+    List<Employee> findByFirstOrLastName(String name);
+
 }

@@ -66,7 +66,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             return employeeDao.updateEmployee(employee);
 
         } else {
-            throw new NoSuchEntityException("Employee does not exist in the database - " + id);
+            throw new NoSuchEntityException("Employee with id " + id + " does not exist in the database");
         }
     }
 
@@ -78,5 +78,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         }
         employeeDao.deleteEmployeeById(id);
+    }
+
+    @Override
+    public List<Employee> findByFirstOrLastName(String name) {
+        List<Employee> employees = employeeDao.findByFirstOrLastName(name);
+        if (employees.isEmpty()) {
+            throw new NoSuchEntityException("Employees were not found by this name - " + name);
+        }
+        return employees;
     }
 }

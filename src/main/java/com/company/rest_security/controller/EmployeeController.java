@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/employees")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
@@ -28,7 +28,7 @@ public class EmployeeController {
         this.hateoasProvider = hateoasProvider;
     }
 
-    @PostMapping("/employees")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EmployeeDto addEmployee(@RequestBody EmployeeDto employeeDto) {
         Employee addedEmployee = employeeService.addEmployee(employeeDtoConverter.convertToEntity(employeeDto));
@@ -38,7 +38,7 @@ public class EmployeeController {
         return employee;
     }
 
-    @GetMapping("/employees")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<EmployeeDto> findAll() {
         List<Employee> employeesList = employeeService.findAll();
@@ -52,7 +52,7 @@ public class EmployeeController {
         return employees;
     }
 
-    @GetMapping("/employees/{id}")
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public EmployeeDto findById(@PathVariable Long id) {
         Employee employee = employeeService.findById(id);
@@ -62,7 +62,7 @@ public class EmployeeController {
         return employeeDto;
     }
 
-    @PutMapping("/employees/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public EmployeeDto updateEmployee(@RequestBody EmployeeDto employeeDto, @PathVariable Long id) {
         Employee updatedEmployee = employeeService.update(employeeDtoConverter.convertToEntity(employeeDto), id);
@@ -72,12 +72,26 @@ public class EmployeeController {
         return employee;
     }
 
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<String> deleteEmployee(@PathVariable Long id) {
         employeeService.deleteById(id);
 
         return ResponseEntity.status(HttpStatus.OK)
-                .body("Employee was deleted - " + id);
+                .body("Employee with id " + id + " was deleted");
+    }
+
+    @GetMapping("/{name}/")
+    @ResponseStatus(HttpStatus.OK)
+    public List<EmployeeDto> findByFirstOrLastName(@PathVariable String name) {
+        List<Employee> employeesList = employeeService.findByFirstOrLastName(name);
+
+        List<EmployeeDto> employees =
+                employeesList.stream()
+                        .map(employeeDtoConverter::convertToDto)
+                        .peek(hateoasProvider::addLinks)
+                        .toList();
+
+        return employees;
     }
 }
