@@ -33,7 +33,7 @@ The *administrator* has access to adding new employees to the database, changing
    * The custom password validation rules have been implemented.
    * DTO pattern is used for carrying data between the layers.
    * The hypermedia-based structure is used for simplifying access to the application for clients.
-   * All the layers of architecture are covered with tests.
+   * All the layers of the application architecture are covered with tests.
 
 ### APIs Endpoints
 
