@@ -5,6 +5,7 @@ import com.company.rest_security.dto.converter.DtoConverter;
 import com.company.rest_security.entity.Employee;
 import com.company.rest_security.hateoas.EmployeeHateoasProvider;
 import com.company.rest_security.service.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +31,7 @@ public class EmployeeController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public EmployeeDto addEmployee(@RequestBody EmployeeDto employeeDto) {
+    public EmployeeDto addEmployee(@RequestBody @Valid EmployeeDto employeeDto) {
         Employee addedEmployee = employeeService.addEmployee(employeeDtoConverter.convertToEntity(employeeDto));
         EmployeeDto employee = employeeDtoConverter.convertToDto(addedEmployee);
         hateoasProvider.addLinks(employee);
@@ -64,7 +65,7 @@ public class EmployeeController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public EmployeeDto updateEmployee(@RequestBody EmployeeDto employeeDto, @PathVariable Long id) {
+    public EmployeeDto updateEmployee(@RequestBody @Valid EmployeeDto employeeDto, @PathVariable Long id) {
         Employee updatedEmployee = employeeService.update(employeeDtoConverter.convertToEntity(employeeDto), id);
         EmployeeDto employee = employeeDtoConverter.convertToDto(updatedEmployee);
         hateoasProvider.addLinks(employee);

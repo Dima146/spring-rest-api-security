@@ -6,21 +6,21 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @FieldMatch.List({
-        @FieldMatch(first = "password", second = "matchingPassword", message = "The password fields must match")
+        @FieldMatch(first = "password", second = "matchingPassword", message = "fields must match")
 })
 public class UserDto {
 
     private Long id;
 
-    @NotNull(message = "Username is required")
-    @Size(min = 4, max = 15, message = "Username should be between 4 and 15 characters")
+    @NotNull(message = "field is required")
+    @Size(min = 4, max = 15, message = "should be between 4 and 15 characters")
     private String username;
 
-    @NotNull(message = "Password is required")
-    @Size(min = 8, max = 20, message = "Password should be at least 8 characters")
+    @NotNull(message = "field is required")
     @StrongPassword
     private String password;
 
+    @NotNull(message = "field is required")
     private String matchingPassword;
 
     public UserDto() {

@@ -70,9 +70,11 @@ public class SecurityConfig {
         httpSecurity.exceptionHandling().accessDeniedHandler(accessDeniedEntryPoint)
                         .authenticationEntryPoint(authenticationEntryPoint);
 
+
+
         httpSecurity.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
-        httpSecurity.csrf().disable();  // http.csrf(csrf -> csrf.disable());
+        httpSecurity.csrf().disable();
 
         return httpSecurity.build();
 

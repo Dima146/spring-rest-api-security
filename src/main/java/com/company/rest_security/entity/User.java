@@ -1,7 +1,10 @@
 package com.company.rest_security.entity;
 
 import jakarta.persistence.*;
+
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Objects;
 
 
 @Entity
@@ -93,5 +96,20 @@ public class User {
                 ", enabled=" + enabled +
                 ", roles=" + roles +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return enabled == user.enabled && Objects.equals(id, user.id) && Objects.equals(username, user.username)
+                                       && Objects.equals(password, user.password) && Objects.equals(roles, user.roles);
+        
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, enabled, roles);
     }
 }

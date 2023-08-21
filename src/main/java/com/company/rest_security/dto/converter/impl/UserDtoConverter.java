@@ -1,6 +1,7 @@
-package com.company.rest_security.dto.converter;
+package com.company.rest_security.dto.converter.impl;
 
 import com.company.rest_security.dto.UserDto;
+import com.company.rest_security.dto.converter.DtoConverter;
 import com.company.rest_security.entity.User;
 import org.springframework.stereotype.Component;
 

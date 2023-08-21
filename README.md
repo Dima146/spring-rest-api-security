@@ -37,9 +37,9 @@ The *administrator* has access to adding new employees to the database, changing
 
 ### APIs Endpoints
 
-      Registration - POST http://localhost:8080/user/register
+      Registration - POST http://localhost:8080/user/registration
 
-      Login - POST http://localhost:8080/user/authenticate
+      Login - POST http://localhost:8080/user/authentication
 
       Retrieve all entities - GET http://localhost:8080/api/employees
 
@@ -55,17 +55,17 @@ The *administrator* has access to adding new employees to the database, changing
 
 ### Extra
 <p float="left">
-<img height="150" src="screenshots\already-exists.png" title="already-exists" width="200"/>
-<img height="150" src="screenshots\authentication.png" title="authentication" width="200"/>
-<img height="150" src="screenshots\by-id.png" title="by-id" width="200"/>
-<img height="150" src="screenshots\does-not-exist.png" title="does not exist" width="200"/>
+<img height="150" src="screenshots/already-exists.png" title="already-exists" width="200"/>
+<img height="150" src="screenshots/authentication.png" title="authentication" width="200"/>
+<img height="150" src="screenshots/by-id.png" title="by-id" width="200"/>
+<img height="150" src="screenshots/does-not-exist.png" title="does not exist" width="200"/>
 </p>
 
 <p>
-<img height="150" src="screenshots\not-authenticated.png" title="not-authenticated" width="200"/>
-<img height="150" src="screenshots\not-authorized.png" title="not-authorized" width="200"/>
-<img height="150" src="screenshots\registration-errors.png" title="registration-errors" width="200"/>
-<img height="150" src="screenshots\registration.png" title="registration" width="200"/>
+<img height="150" src="screenshots/authentication.png" title="not-authentication" width="200"/>
+<img height="150" src="screenshots/not-authorized.png" title="not-authorized" width="200"/>
+<img height="150" src="screenshots/registration-errors.png" title="registration-errors" width="200"/>
+<img height="150" src="screenshots/registration.png" title="registration" width="200"/>
 </p>
 
 

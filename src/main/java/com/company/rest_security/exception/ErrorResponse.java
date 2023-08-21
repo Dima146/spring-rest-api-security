@@ -5,12 +5,11 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-
 import java.time.LocalDateTime;
 
 public class ErrorResponse {
 
-    private int status;
+    private String status;
     private String message;
 
     @JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -21,17 +20,17 @@ public class ErrorResponse {
     public ErrorResponse() {
     }
 
-    public ErrorResponse(int status, String message, LocalDateTime timeStamp) {
+    public ErrorResponse(String status, String message, LocalDateTime timeStamp) {
         this.status = status;
         this.message = message;
         this.timeStamp = timeStamp;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

@@ -16,7 +16,6 @@ public class LoggingAspect {
     public void controllerMethods() {
     }
 
-
     @Before("controllerMethods()")
     public void logBeforeExecutionTime(JoinPoint joinPoint) {
         LOGGER.debug("Executing method: " + joinPoint.getSignature());
@@ -31,6 +30,6 @@ public class LoggingAspect {
 
     @AfterThrowing(value = "controllerMethods()", throwing = "exception")
     public void logAfterThrowingException(JoinPoint jp, Exception exception) {
-        LOGGER.error("Method " + jp.getSignature() + " throws " + exception.getCause());
+        LOGGER.error("Method " + jp.getSignature() + " throws " + exception);
     }
 }

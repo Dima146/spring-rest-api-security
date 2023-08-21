@@ -42,7 +42,7 @@ public class UserController {
 
     @PostMapping("/authentication")
     @ResponseStatus(HttpStatus.OK)
-    public UserCredentialDto authenticateUser(@RequestBody UserCredentialDto userCredentialDto) {
+    public UserCredentialDto authenticateUser(@RequestBody @Valid UserCredentialDto userCredentialDto) {
 
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 userCredentialDto.getUsername(), userCredentialDto.getPassword()));

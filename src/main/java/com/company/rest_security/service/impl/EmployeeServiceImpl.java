@@ -67,7 +67,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             return employeeDao.updateEmployee(employee);
 
         } else {
-            throw new NoSuchEntityException("Employee with id " + id + " does not exist in the database");
+            throw new NoSuchEntityException("Employee with id - " + id + " does not exist in the database");
         }
     }
 

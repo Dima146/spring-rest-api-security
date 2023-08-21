@@ -8,15 +8,15 @@ import org.springframework.hateoas.RepresentationModel;
 public class EmployeeDto extends RepresentationModel<EmployeeDto> {
 
     private Long id;
-    @NotNull(message = "is required")
-    @Size(min = 2, max = 20, message = "First name should be between 2 and 20 characters")
+    @NotNull(message = "field is required")
+    @Size(min = 2, max = 20, message = "should be between 2 and 20 characters")
     private String firstName;
 
-    @NotNull(message = "is required")
-    @Size(min = 2, max = 20, message = "Last name should be between 2 and 20 characters")
+    @NotNull(message = "field is required")
+    @Size(min = 2, max = 20, message = "should be between 2 and 20 characters")
     private String lastName;
 
-    @NotNull(message = "is required")
+    @NotNull(message = "field is required")
     @Size(min = 8, message = "is required")
     @Pattern(regexp="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$",
             message = "should be @email.com")

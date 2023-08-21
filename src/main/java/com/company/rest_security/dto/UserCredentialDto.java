@@ -1,11 +1,14 @@
 package com.company.rest_security.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
 
 public class UserCredentialDto {
 
+    @NotNull(message = "field is required")
     private String username;
 
+    @NotNull(message = "field is required")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     private String token;
