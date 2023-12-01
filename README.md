@@ -55,27 +55,14 @@ The *administrator* has access to adding new employees to the database, changing
 
 ### Extra
 <p float="left">
-<img height="150" src="screenshots/already-exists.png" title="already-exists" width="200"/>
-<img height="150" src="screenshots/authentication.png" title="authentication" width="200"/>
-<img height="150" src="screenshots/by-id.png" title="by-id" width="200"/>
-<img height="150" src="screenshots/does-not-exist.png" title="does not exist" width="200"/>
+<img alt="already-exists" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/62fc1fff-9ad6-49da-b14c-188172a48c89" title="already-exists" width="200"/>
+<img alt="authentication" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/c83844cb-8734-4eb5-aadc-22e0cf47978e" title="authentication" width="200"/>
+<img alt="by-id" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/2f4468b6-8765-4896-9b3d-ea2df0fa716d" title="by-id" width="200"/>
+<img alt="created" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/c08b0ebb-508b-4242-a885-4e271e18fcdc" title="created" width="200"/>
 </p>
-
 <p>
-<img height="150" src="screenshots/authentication.png" title="not-authentication" width="200"/>
-<img height="150" src="screenshots/not-authorized.png" title="not-authorized" width="200"/>
-<img height="150" src="screenshots/registration-errors.png" title="registration-errors" width="200"/>
-<img height="150" src="screenshots/registration.png" title="registration" width="200"/>
+<img alt="does-not-exist" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/9346d028-9d7b-4750-a8be-16cc4422d659" title="does-not-exist" width="200"/>
+<img alt="not-authorized" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/716a50f6-7f5e-4f99-8f0a-de5a84976522" title="not-authorized" width="200"/>
+<img alt="registration" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/40bdf83d-4495-4413-950e-8cd47f40f3dc" title="registration" width="200"/>
+<img alt="registration-errors" height="150" src="https://github.com/Dima146/spring-rest-api-security/assets/87914550/4081ac23-1988-4076-8d79-0b7fe6a71e99" title="registration-errors" width="200"/>
 </p>
-
-
-
-
-
-
-
-      
-      
-      
-
-  
