@@ -11,7 +11,6 @@ The functions are available to the user depending on the *role*.
 *An unauthenticated user* has to create a new account and log in into it. A user with a *basic* role can retrieve all entities, an entity by id, by first or last name.
 The *administrator* has access to adding new employees to the database, changing and deleting information about them.
 
-
 ### Used Technologies
 * JDK version: 17
 * Spring Web MVC (REST)
