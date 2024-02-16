@@ -15,7 +15,6 @@ The *administrator* has access to adding new employees to the database, changing
 * JDK version: 17
 * Spring Web MVC (REST)
 * Spring Security
-* Java JWT: JSON Web Token for Java and Android
 * Java Persistence API (Hibernate)
 * Spring HATEOAS
 * Hibernate Validator
@@ -28,7 +27,7 @@ The *administrator* has access to adding new employees to the database, changing
    * The application is organised into the three-tier architecture. Each layer has its own logic.
    * JSON is used as a format of client-server communication messages.
    * The error/exception handling mechanism has been implemented.
-   * The application supports stateless user authentication and JWT token for authorization.
+   * The application supports stateless user authentication and JWT token for authorization. BASIC
    * The custom password validation rules have been implemented.
    * DTO pattern is used for carrying data between the layers.
    * The hypermedia-based structure is used for simplifying access to the application for clients.
